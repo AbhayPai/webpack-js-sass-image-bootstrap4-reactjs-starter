@@ -1,0 +1,51 @@
+{
+  "name": "boilerplate-webpack-js-sass-image-bootstrap4",
+  "version": "1.0.0",
+  "description": "Boilerplate for webpack js, sass, image and Bootstrap 4",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --progress --colors --watch --mode development",
+    "build": "webpack --progress --colors --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AbhayPai/boilerplate-webpack-js-sass-image-bootstrap4"
+  },
+  "keywords": [
+    "nodejs",
+    "npm",
+    "webpack",
+    "babel",
+    "sass",
+    "Image",
+    "bootstrap4"
+  ],
+  "author": "Abhay Pai",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "bootstrap": "^4.1.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.2",
+    "css-loader": "^1.0.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^2.0.0",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1",
+    "node-sass": "^4.9.3",
+    "popper.js": "^1.14.4",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.22.1",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "url-loader": "^1.1.1",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  }
+}
