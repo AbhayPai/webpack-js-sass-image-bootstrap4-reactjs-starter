@@ -9,6 +9,8 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CssNano = require('cssnano');
 
 // the path(s) that should be cleaned
 let PathsToClean = [
@@ -60,9 +62,6 @@ module.exports = {
               // minimize the output css file
               // https://github.com/webpack-contrib/extract-text-webpack-plugin
               loader: "css-loader",
-              options: {
-                minimize: true,
-              }
           }, {
               // using sass loader for compiling the files
               // https://github.com/webpack-contrib/sass-loader
@@ -114,5 +113,14 @@ module.exports = {
         to: Path.join(__dirname, "./", "public/", "images/"),
       }
     ]),
+
+    new OptimizeCssAssetsPlugin(
+    {
+      cssProcessor: CssNano,
+      cssProcessorPluginOptions: {
+        preset: ['default', { discardComments: { removeAll: true } }],
+      },
+      canPrint: true
+    }),
   ]
 };
